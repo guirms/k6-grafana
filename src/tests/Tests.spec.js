@@ -19,11 +19,11 @@ export const options = {
     status_code_valid: ['rate>0.88']
   },
   stages: [
-    { duration: '0m', target: 10 },   // Início com 10 VU's
+    { duration: '10s', target: 10 },   // Início com 10 VU's
     { duration: '1m', target: 100 }, // 1 minuto para chegar a 100 VU's
-    { duration: '2m', target: 150 }, // Mais 2 minutos para alcançar 150 VU's
-    { duration: '4m', target: 300 }, // Mais 4 minutos para alcançar 300 VU's
-    { duration: '5m', target: 0 }    // 1 minuto para encerrar os testes
+    { duration: '1m', target: 180 }, // Mais 2 minutos para alcançar 150 VU's
+    { duration: '1m', target: 240 }, // Mais 4 minutos para alcançar 300 VU's
+    { duration: '110s', target: 300 }    // 1 minuto para encerrar os testes
   ]
 };
 
