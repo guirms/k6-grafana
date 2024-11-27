@@ -6,7 +6,7 @@ import { Trend, Rate } from 'k6/metrics';
 
 // Definindo métricas personalizadas
 export const getContactsDuration = new Trend('get_contacts_duration', true); // Duração das chamadas GET
-export const statusCodeRate = new Rate('status_code_valid');                 // Taxa de respostas com status válido
+export const statusCodeRate = new Rate('status_code_valid'); // Taxa de respostas com status válido
 
 // Configuração de carga e thresholds
 export const options = {
@@ -19,11 +19,11 @@ export const options = {
     status_code_valid: ['rate>0.88']
   },
   stages: [
-    { duration: '10s', target: 10 },   // Início com 10 VU's
+    { duration: '10s', target: 10 }, // Início com 10 VU's
     { duration: '1m', target: 100 }, // 1 minuto para chegar a 100 VU's
     { duration: '1m', target: 180 }, // Mais 2 minutos para alcançar 150 VU's
     { duration: '1m', target: 240 }, // Mais 4 minutos para alcançar 300 VU's
-    { duration: '110s', target: 300 }    // 1 minuto para encerrar os testes
+    { duration: '110s', target: 300 } // 1 minuto para encerrar os testes
   ]
 };
 
